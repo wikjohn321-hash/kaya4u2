@@ -1,0 +1,66 @@
+:root{--bg:#06122b;--bg2:#0b1d42;--card:#10264f;--line:#1e3a73;--accent:#27c4ff;--accent2:#1a7dff;--gold:#ffd24f;--text:#eaf3ff;--mute:#9db4d9}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:linear-gradient(180deg,#0b1d42,var(--bg) 480px);color:var(--text);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding-bottom:78px}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.wrap{max-width:760px;margin:0 auto;padding:14px}
+
+.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 14px;background:rgba(6,18,43,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top img{display:block;height:30px;width:auto}
+.top nav{display:none;gap:18px;font-weight:600;font-size:.92rem;color:var(--mute)}
+.btn{display:inline-block;border-radius:12px;padding:10px 18px;font-weight:800;font-size:.95rem;text-align:center;color:#021027;background:linear-gradient(#5ad7ff,#1a9ff0);box-shadow:0 3px 0 #0b5fa8}
+.btn.gold{background:linear-gradient(#ffd24f,#e69a00);box-shadow:0 3px 0 #a56b00}
+.btn.lg{padding:14px 26px;font-size:1.05rem}
+.btn.ghost{background:none;border:1px solid var(--accent);color:var(--accent);box-shadow:none}
+
+.slider{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+.slides{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+.slides::-webkit-scrollbar{display:none}
+.slide{flex:0 0 100%;scroll-snap-align:start;aspect-ratio:16/5;display:block}
+.slide img{width:100%;height:100%;object-fit:cover;display:block}
+.dots{position:absolute;bottom:8px;left:0;right:0;display:flex;justify-content:center;gap:7px}
+.dots button{width:8px;height:8px;border:0;border-radius:99px;background:#fff6;padding:0;cursor:pointer}
+.dots button.on{width:22px;background:var(--accent)}
+
+.intro{padding:22px 2px 6px}
+.intro h1{font-size:1.65rem;line-height:1.2;margin-bottom:10px}
+.intro p{color:var(--mute);margin-bottom:16px}
+.cta-row{display:flex;gap:10px;flex-wrap:wrap}
+
+section{margin:34px 0}
+h2{font-size:1.4rem;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+h2::before{content:"";width:5px;height:1.2em;border-radius:3px;background:linear-gradient(var(--accent),var(--accent2))}
+h3{font-size:1.02rem;margin-bottom:4px}
+p{margin-bottom:12px}
+.lead{color:var(--mute)}
+
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+.box p{color:var(--mute);font-size:.9rem;margin:0}
+.box .ico{font-size:1.5rem;display:block;margin-bottom:6px}
+
+.offers .box{border-left:4px solid var(--accent)}
+.offers strong{color:var(--gold)}
+
+.games{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.games a{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.games img{display:block;width:100%;aspect-ratio:1;object-fit:cover;object-position:center 75%}
+.games span{display:block;padding:6px 8px 9px;font-size:.78rem;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+dl dt{font-weight:800;color:var(--accent);margin-top:12px}
+dl dd{color:var(--mute)}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:10px;padding:14px 16px}
+summary{cursor:pointer;font-weight:700}
+details p{margin:10px 0 0;color:var(--mute);font-size:.94rem}
+
+.notice{background:#0a2147;border:1px solid var(--line);border-radius:14px;padding:14px;font-size:.9rem;color:var(--mute)}
+footer{max-width:760px;margin:0 auto;padding:10px 14px 24px;text-align:center;color:var(--mute);font-size:.82rem}
+
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px 14px;background:#040c1f;border-top:1px solid var(--line);display:flex;gap:10px;max-width:760px;margin:0 auto}
+.bar .btn{flex:1}
+
+@media(min-width:720px){.top nav{display:flex}.games{grid-template-columns:repeat(4,1fr)}.grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:520px){.games{grid-template-columns:repeat(3,1fr)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
